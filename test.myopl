@@ -1,6 +1,6 @@
-# This is a very useful piece of software
+# Welcome to Abi-Lang easy use programming language
 
-FUN oopify(prefix) -> prefix + "oop"
+FUN abify(prefix) -> prefix + "abi"
 
 FUN join(elements, separator)
 	VAR result = ""
@@ -20,12 +20,13 @@ FUN map(elements, func)
 	FOR i = 0 TO LEN(elements) THEN
 		APPEND(new_elements, func(elements/i))
 	END
-
 	RETURN new_elements
 END
+VAR new1 = []
+VAR new2 = []
 
-PRINT("Greetings universe!")
+PRINT("Hello World!")
 
 FOR i = 0 TO 5 THEN
-	PRINT(join(map(["l", "sp"], oopify), ", "))
+	PRINT(join(map(["hi ", "hello "], abify), ", "))
 END
